@@ -6,7 +6,7 @@
 void main ()
 {
 	int num1,num2,rem;
-	int lcm;
+	int lcm,gcd;
 	printf ("Enter the first number :");
 	scanf ("%d",&num1);
 	printf ("Enter the second number :");
@@ -27,8 +27,9 @@ void main ()
 		rem=devint%divisor;
 		devint=divisor;
 		divisor=rem;
+		gcd = devint;
 	}
-	printf ("The gcd or hcf of %d and %d is :%d",num1,num2,devint);
+	printf ("The gcd or hcf of %d and %d is :%d",num1,num2,gcd);
 	// lcm * hcf = the product of two numbers
 	lcm = (num1*num2)/devint;
 	printf ("\nThe lcm of %d and %d is :%d",num1,num2,lcm);
